@@ -1,0 +1,42 @@
+﻿@model TaskUni.conference_attenders
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>conference_attenders</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.isAccepted)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.isAccepted)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Attender.firstname)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Attender.firstname)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.conference.Title)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.conference.Title)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
